@@ -1,4 +1,4 @@
-# Instance-Dependent Multi-Label Noise Generation for Multi-Label Remote Sensing Image Classification (IEEE JSTARS)
+# Instance-Dependent Multi-Label Noise Generation for Multi-Label Remote Sensing Image Classification (IEEE JSTARS) | [Paper](https://ieeexplore.ieee.org/document/10663835)
 
 ## Abstract
 
@@ -70,3 +70,21 @@ python main.py --dataset [dataset] \
                --noise_rate [noise_rate] \
 ```
 where [dataset] in {UCMerced, MLRSNet, AID}, [scheme] in {BCE, LCR, RCML, SAT, ELR, JoCoR}, [noise_rate] in {10, 20, 30, 40}.
+
+## How to cite
+If our work is helpful, please consider citing our paper.
+```
+@ARTICLE{10663835,
+  author={Kim, Youngwook and Kim, Sehwan and Ro, Youngmin and Lee, Jungwoo},
+  journal={IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing}, 
+  title={Instance-Dependent Multi-Label Noise Generation for Multi-Label Remote Sensing Image Classification}, 
+  year={2024},
+  volume={},
+  number={},
+  pages={1-12},
+  keywords={Noise;Training;Remote sensing;Labeling;Image classification;Deep learning;Costs;Multi-label remote sensing image classification;multi-label noise;vision-language model;instance-dependent noise;deep learning;remote sensing},
+  doi={10.1109/JSTARS.2024.3454157}}
+```
+
+## Acknowledgements
+Our code is heavily built upon [Bridging the Gap between Model Explanations in Partially Annotated Multi-label Classification](https://github.com/youngwk/BridgeGapExplanationPAMC) and [Large Loss Matters in Weakly Supervised Multi-Label Classification](https://github.com/snucml/LargeLossMatters).
