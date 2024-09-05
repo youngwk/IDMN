@@ -11,9 +11,8 @@ class GlobalAvgPool2d(nn.Module):
         return F.adaptive_avg_pool2d(feature_map, 1).squeeze(-1).squeeze(-1)
 
 class ImageClassifier(torch.nn.Module):
-    def __init__(self, arch, num_classes):
+    def __init__(self, num_classes):
         super(ImageClassifier, self).__init__()
-        self.arch = arch
         self.num_classes = num_classes
 
         feature_extractor = torchvision.models.resnet50(weights=torchvision.models.ResNet50_Weights.IMAGENET1K_V1)

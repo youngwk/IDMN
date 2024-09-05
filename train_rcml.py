@@ -25,8 +25,8 @@ def run_train(args):
             pin_memory = True
         )
 
-    model1 = models.ImageClassifier(args.arch, args.num_classes)
-    model2 = models.ImageClassifier(args.arch, args.num_classes)
+    model1 = models.ImageClassifier(args.num_classes)
+    model2 = models.ImageClassifier(args.num_classes)
 
     optimizer1 = torch.optim.Adam(model1.parameters(), lr=args.lr)
     optimizer2 = torch.optim.Adam(model2.parameters(), lr=args.lr)

@@ -1,9 +1,13 @@
-import datasets
 import numpy as np
 from PIL import Image
 import torch
 import os
 import clip
+
+import os
+import sys
+sys.path.append(os.path.dirname(os.path.abspath(os.path.dirname(__file__))))
+import datasets
 
 AID_CATEGORY = ['airplane', 'bare soil', 'buildings', 'cars', 'chaparral', 'court', 'dock', 'field', 'grass', 'mobile home', 'pavement', 'sand', 'sea', 'ship', 'tanks', 'trees', 'water']
 

@@ -1,10 +1,14 @@
-import datasets
 import numpy as np
 from PIL import Image
 import torch
 import os
 import clip
 from tqdm import tqdm
+
+import os
+import sys
+sys.path.append(os.path.dirname(os.path.abspath(os.path.dirname(__file__))))
+import datasets
 
 MLRSNET_CATEGORY = ['airplane','airport','bare soil','baseball diamond','basketball court','beach','bridge','buildings','cars','chaparral','cloud','containers','crosswalk','dense residential area','desert','dock','factory','field','football field','forest','freeway','golf course','grass','greenhouse','gully','habor','intersection','island','lake','mobile home','mountain','overpass','park','parking lot','parkway','pavement','railway','railway station','river','road','roundabout','runway','sand','sea','ships','snow','snowberg','sparse residential area','stadium','swimming pool','tanks','tennis court','terrace','track','trail','transmission tower','trees','water','wetland','wind turbine']
 class Config:

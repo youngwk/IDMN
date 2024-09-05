@@ -67,8 +67,9 @@ class ds_multilabel(Dataset):
                 elif self.label_matrix[i][j] == 1 and clip_logits[i][j] < subtractive_threshold:
                     self.label_matrix[i][j] = 0 # subtractive noise
                     num_subtractive += 1
-        print(f'Additive noise : {num_additive} {np.sum(neg_logits > additive_threshold)}')
-        print(f'Subtractive noise : {num_subtractive} {np.sum(pos_logits < subtractive_threshold)}')
+        print(f'Noise rate : {args.noise_rate}')
+        print(f'Number of additive noise : {num_additive}')
+        print(f'Number of subtractive noise : {num_subtractive}')
     
     def __len__(self):
         return len(self.image_paths)

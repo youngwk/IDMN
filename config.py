@@ -29,21 +29,6 @@ _LOOKUP = {
     }
 }
 
-class Logger(object):
-    """Log stdout messages."""
-
-    def __init__(self, outfile):
-        self.terminal = sys.stdout
-        self.log = open(outfile, "a")
-        sys.stdout = self.log
-
-    def write(self, message):
-        self.terminal.write(message)
-        self.log.write(message)
-
-    def flush(self):
-        self.terminal.flush()
-
 
 def set_dir(runs_dir, exp_name):
     runs_dir = ospj(runs_dir, exp_name)
@@ -51,9 +36,6 @@ def set_dir(runs_dir, exp_name):
         os.makedirs(runs_dir)
     return runs_dir
 
-def set_log(runs_dir):
-    log_file_name = ospj(runs_dir, 'log.log')
-    Logger(log_file_name)
 
 def set_follow_up_configs(args):
     args.feat_dim = 2048
@@ -101,7 +83,6 @@ def get_configs():
 
     args = parser.parse_args()
     args = set_follow_up_configs(args)
-    set_log(args.save_path)
 
     return args
 

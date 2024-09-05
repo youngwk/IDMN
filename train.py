@@ -25,7 +25,7 @@ def run_train(args):
             pin_memory = True
         )
 
-    model = models.ImageClassifier(args.arch, args.num_classes)
+    model = models.ImageClassifier(args.num_classes)
 
 
     optimizer = torch.optim.Adam(model.parameters(), lr=args.lr)
