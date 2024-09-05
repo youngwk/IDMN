@@ -48,19 +48,19 @@ data
 - UCMerced
 ```
 python preproc/format_ucmerced.py
-python clip_ucmerced.py
+python preproc/clip_ucmerced.py
 ```
 
 - MLRSNet
 ```
 python preproc/format_mlrsnet.py
-python clip_mlrsnet.py
+python preproc/clip_mlrsnet.py
 ```
 
 - AID
 ```
 python preproc/format_aid.py
-python clip_aid.py
+python preproc/clip_aid.py
 ```
 
 ### Step 4. Run experiments.
